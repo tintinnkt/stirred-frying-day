@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+# to prevent who accidentally use npm (we are using pnpm)
+package-lock.json
 
 # testing
 /coverage
