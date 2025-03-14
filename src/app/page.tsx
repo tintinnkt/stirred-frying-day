@@ -9,6 +9,14 @@ const dummyData = [
 	{subject: "Exp Eng II" , progress: 0.1},
 ] as CourseProgressData[];
 
+const todayTaskDummyData = [
+	{isDone: false, topic: "Integration by parts", subject: "Calculus II"},
+	{isDone: false, topic: "Wave & Optics", subject: "Physics II"},
+	{isDone: false, topic: "Quantum Mechanics", subject: "Physics II"},
+	{isDone: false, topic: "Cause-Effect essay", subject: "Exp Eng II"},
+]
+
+//TODO: Move this page somewhere else?
 export default function Home() {
 	return (
 		// TODO: Make this a component?
@@ -30,10 +38,12 @@ export default function Home() {
 				/>
 			</div>
 			<DailyProgress />
+			<Suggestion 
+				datas={todayTaskDummyData}
+			/>		
 			<CourseProgress 
 				datas={dummyData}
 			/>
-			<Suggestion />		
 		</div>
 	);
 }
