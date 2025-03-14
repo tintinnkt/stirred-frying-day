@@ -1,2 +1,4 @@
-import { NextRequest } from "next/server";
-export async function handleCreateCourse(request: NextRequest) {}
+import { NextRequest, NextResponse } from "next/server";
+export async function handleCreateCourse(request:NextRequest) {
+
+}
