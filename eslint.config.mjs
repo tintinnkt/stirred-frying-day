@@ -61,6 +61,53 @@ const eslintConfig = [
       ],
     },
   },
+  {
+    files: ["src/components/**/*.tsx", "src/types/**/*.d.ts"],
+    ignores: [
+      "**/next-auth.d.ts",
+      "**/middleware.d.ts",
+      "src/types/api/**/*.d.ts",
+    ],
+
+    rules: {
+      "unicorn/filename-case": [
+        "error",
+        {
+          cases: {
+            pascalCase: true,
+          },
+        },
+      ],
+    },
+  },
+  {
+    files: ["src/types/api/**/*.d.ts"],
+
+    rules: {
+      "unicorn/filename-case": [
+        "error",
+        {
+          cases: {
+            kebabCase: true,
+          },
+        },
+      ],
+    },
+  },
+  {
+    files: ["**/*.d.ts"],
+
+    rules: {
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "TSEnumDeclaration",
+          message:
+            "Enums are not allowed in declaration files. Use a union type or alternative approach.",
+        },
+      ],
+    },
+  },
 ];
 
 export default eslintConfig;
