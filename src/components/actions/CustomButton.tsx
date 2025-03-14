@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import {
   Check,
@@ -59,7 +59,7 @@ export const CustomButton = ({
   return (
     <Button
       className={cn(
-        "rounded-full flex items-center gap-2",
+        "flex items-center gap-2 rounded-full",
         config.className,
         hideTextOnMobile && "max-md:size-10 max-md:p-0",
         !config.label && "size-10 p-0",
