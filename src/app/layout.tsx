@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <main className="w-full justify-self-center bg-neutral-50 md:max-w-3/5">
           <Navbar />
+          <Toaster position="bottom-right" />
           {children}
         </main>
       </body>
