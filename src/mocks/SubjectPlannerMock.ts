@@ -1,3 +1,5 @@
+import { CourseProgressData } from "@/components/courseprogress";
+
 export const mockData = {
   subject: "Calculus II",
   topics: [
@@ -54,3 +56,16 @@ export const mockData = {
     },
   ],
 };
+
+const dummyCourseProgressData = [
+  { subject: "Calculus II", progress: 0.8 },
+  { subject: "Physics II", progress: 0.3 },
+  { subject: "Exp Eng II", progress: 0.1 },
+] as Array<CourseProgressData>;
+
+const dummyTodayTaskData = [
+  { isDone: false, topic: "Integration by parts", subject: "Calculus II" },
+  { isDone: false, topic: "Wave & Optics", subject: "Physics II" },
+  { isDone: false, topic: "Quantum Mechanics", subject: "Physics II" },
+  { isDone: false, topic: "Cause-Effect essay", subject: "Exp Eng II" },
+];
