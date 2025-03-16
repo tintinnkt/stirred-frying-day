@@ -10,7 +10,5 @@ const CourseResource: Schema = new Schema({
   detail: { type: String, required: true },
 });
 
-export default mongoose.model<ICourseResource>(
-  "CourseResource",
-  CourseResource,
-);
+export default mongoose.models.CourseResource ||
+  mongoose.model<ICourseResource>("CourseResource", CourseResource);

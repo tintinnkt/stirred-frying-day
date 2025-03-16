@@ -16,4 +16,5 @@ const TaskSchema: Schema = new Schema({
   deadline: { type: Date, required: false },
 });
 
-export default mongoose.model<ITask>("Task", TaskSchema);
+export default mongoose.models.Task ||
+  mongoose.model<ITask>("Task", TaskSchema);
