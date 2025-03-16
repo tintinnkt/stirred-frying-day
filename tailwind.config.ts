@@ -22,7 +22,7 @@ const config: Config = {
           700: "#154872",
           800: "#0E2F4F",
           900: "#06172B",
-          DEFAULT: "247BBA",
+          DEFAULT: "#247BBA",
         },
         secondary: {
           50: "#FFF4DC",
@@ -35,7 +35,7 @@ const config: Config = {
           700: "#A86A0D",
           800: "#7F4909",
           900: "#552905",
-          DEFAULT: "FBAD18",
+          DEFAULT: "#FBAD18",
         },
         grayLight: "#E5E5E5",
         orangeLight: "#FF8E30",

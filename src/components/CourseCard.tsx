@@ -1,9 +1,10 @@
 import { Bookmark } from "lucide-react";
+import toast from "react-hot-toast";
+import { CustomButton } from "./actions/CustomButton";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/Button";
-import { Card, CardHeader } from "./ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Skeleton } from "./ui/skeleton";
-import toast from "react-hot-toast";
 
 interface CourseCardProps {
   course: CourseListAllItem;
@@ -96,7 +97,6 @@ const CourseCard = ({
   return (
     <Skeleton className="rounded-3xl">
       <Card className="rounded-3xl bg-white p-5 shadow-md shadow-neutral-200 sm:p-8">
-        {/* Card Header */}
         <CardHeader className="flex items-start justify-between p-0">
           <div className="flex flex-col gap-x-4 gap-y-1 lg:flex-row">
             <h2 className="max-w-sm font-bold">{course.name}</h2>
@@ -125,12 +125,12 @@ const CourseCard = ({
         </CardHeader>
 
         {/* Card Body */}
-        <CardBody className="p-0">
+        <CardContent className="p-0">
           <p className="pt-4">{course.short_description}</p>
           <p className="text-sm">
             หมวดหมู่: {course.course_category.join(", ")}
           </p>
-        </CardBody>
+        </CardContent>
 
         <Divider />
 

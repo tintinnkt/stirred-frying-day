@@ -1,5 +1,6 @@
 import React from "react";
 import { Badge } from "./ui/badge";
+import { Input } from "./ui/input";
 
 export interface SuggestionProp {
   datas: Array<SuggestionItemProp>;
@@ -19,7 +20,7 @@ const SuggestionItem: React.FC<SuggestionItemProp> = ({
 }) => {
   return (
     <div className="flex gap-2">
-      <input type="checkbox" checked={isDone} />
+      <Input type="checkbox" checked={isDone} />
       <span className="flex-1/2">{topic}</span>
       <Badge color="#a6e3a1">{subject}</Badge>
     </div>

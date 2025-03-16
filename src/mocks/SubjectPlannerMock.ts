@@ -7,7 +7,7 @@ export const mockData = [
         id: "differential-equations",
         title: "Differential Equations",
         examWeight: 20,
-        hoursNeeded: 10,
+        hoursNeeded: 1,
         topicsCovered: [
           { name: "General Solution, Particular Solution", complete: false },
           { name: "Separable Equation", complete: false },
