@@ -6,8 +6,8 @@ export interface ICourseResource extends Document {
 }
 
 const CourseResource: Schema = new Schema({
-  course: { type: Schema.Types.ObjectId, ref: "Course", require: true },
-  detail: { type: String, require: true },
+  course: { type: Schema.Types.ObjectId, ref: "Course", required: true },
+  detail: { type: String, required: true },
 });
 
 export default mongoose.model<ICourseResource>(

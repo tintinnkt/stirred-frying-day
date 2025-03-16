@@ -11,13 +11,13 @@ export interface ICourse extends Document {
 }
 
 const CourseSchema: Schema = new Schema({
-  courseId: { type: Number, require: true, unique: true },
-  courseName: { type: String, require: true },
-  prerequisite: [{ type: Number, require: false }],
-  corequisite: [{ type: Number, require: false }],
-  location: { type: String, require: false },
-  instructor: { type: String, require: false },
-  description: { type: String, require: false },
+  courseId: { type: Number, required: true, unique: true },
+  courseName: { type: String, required: true },
+  prerequisite: [{ type: Number, required: false }],
+  corequisite: [{ type: Number, required: false }],
+  location: { type: String, required: false },
+  instructor: { type: String, required: false },
+  description: { type: String, required: false },
 });
 
 export default mongoose.model<ICourse>("Course", CourseSchema);

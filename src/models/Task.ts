@@ -9,11 +9,11 @@ export interface ITask extends Document {
 }
 
 const TaskSchema: Schema = new Schema({
-  owner: { type: Schema.Types.ObjectId, ref: "Student", require: true },
-  subject: { type: Schema.Types.ObjectId, ref: "Course", require: true },
-  title: { type: String, require: true },
-  detail: { type: String, require: false },
-  deadline: { type: Date, require: false },
+  owner: { type: Schema.Types.ObjectId, ref: "Student", required: true },
+  subject: { type: Schema.Types.ObjectId, ref: "Course", required: true },
+  title: { type: String, required: true },
+  detail: { type: String, required: false },
+  deadline: { type: Date, required: false },
 });
 
 export default mongoose.model<ITask>("Task", TaskSchema);
