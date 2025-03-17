@@ -1,6 +1,5 @@
 import ProfileChart from "@/components/profile/profilecharts";
 import ProfileLuck from "@/components/profile/profileluck";
-import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
@@ -17,7 +16,6 @@ export interface StudentProfile {
 }
 
 const MyProfile: React.FC = async () => {
-  const session = await auth();
   const headersList = await headers();
   const cookie = headersList.get("cookie");
 
@@ -33,7 +31,6 @@ const MyProfile: React.FC = async () => {
 
   return (
     <div>
-      <p>{JSON.stringify(session)}</p>
       <div className="justify-center bg-center text-center">
         <div className="m-4 text-2xl font-bold">My Profile</div>
         <div className="mt-2 mb-2 flex w-full justify-center">

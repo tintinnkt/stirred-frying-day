@@ -18,7 +18,6 @@ const config: NextAuthConfig = {
         const user = await res.json();
 
         if (res.ok && user) {
-          // console.log(user);
           return user;
         }
 
@@ -37,16 +36,12 @@ const config: NextAuthConfig = {
         token.email = user.email;
       }
 
-      // console.log("token");
-      // console.log(token);
       return token;
     },
     session: async ({ session, token }) => {
       session.user.id = token.id as string;
       session.user.email = token.email as string;
 
-      // console.log("session");
-      // console.log(session);
       return session;
     },
   },

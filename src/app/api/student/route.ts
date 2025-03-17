@@ -4,15 +4,6 @@ import { handlePromise } from "@/lib/utils";
 import Student from "@/models/Student";
 import { NextResponse } from "next/server";
 
-// export async function GETrequest: Request) {
-//   const session = await auth();
-//
-//   console.log("AUTH");
-//   console.log(session);
-//   return NextResponse.json(session, { status: 200 });
-// }
-//
-//
 export const GET = auth(async ({ auth }) => {
   if (!auth) return NextResponse.json({ error: "No session" }, { status: 401 });
 
@@ -20,8 +11,6 @@ export const GET = auth(async ({ auth }) => {
 
   if (!student)
     return NextResponse.json({ error: "You don't exists?" }, { status: 500 });
-
-  console.log(student);
 
   return NextResponse.json(student, { status: 200 });
 });
