@@ -10,7 +10,7 @@ export const mockData = [
         hoursNeeded: 1,
         topicsCovered: [
           { name: "General Solution, Particular Solution", complete: false },
-          { name: "Separable Equation", complete: false },
+          { name: "Separable Equation", complete: true },
           { name: "Linear Equation", complete: false },
           { name: "Bernoulli's Equation", complete: false },
         ],

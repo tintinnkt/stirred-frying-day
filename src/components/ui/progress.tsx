@@ -32,19 +32,19 @@ function Progress({
     <ProgressPrimitive.Root
       data-slot="progress"
       className={cn(
-        "relative h-4 w-full overflow-hidden rounded-sm bg-gray-300",
+        "relative h-5 w-full overflow-hidden rounded-sm bg-gray-300",
         className,
       )}
       {...props}
     >
       <ProgressPrimitive.Indicator
         data-slot="progress-indicator"
-        className="bg-primary relative flex h-full items-center justify-center transition-all"
+        className="bg-primary relative flex h-full items-center justify-center p-1 transition-all"
         style={{
           width: `${currentProgress}%`,
         }}
       >
-        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-medium text-white">
+        <span className={"pl-7 text-center text-lg font-medium"}>
           {currentProgress}%
         </span>
       </ProgressPrimitive.Indicator>

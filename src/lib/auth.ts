@@ -32,7 +32,6 @@ const config: NextAuthConfig = {
         ...session,
         user: {
           ...session.user,
-          studentId: user.studentId,
         },
       };
     },

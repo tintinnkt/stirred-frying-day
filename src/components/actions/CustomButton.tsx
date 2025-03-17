@@ -79,7 +79,7 @@ export const CustomButton = ({
         <Icon className="size-5" {...config?.iconProps} />
       )}
       {!hideTextOnMobile && config?.label && (
-        <span className="hidden md:block">
+        <span className="hidden sm:block">
           {typeof config?.label === "string" ? config?.label : config?.label.md}
         </span>
       )}
