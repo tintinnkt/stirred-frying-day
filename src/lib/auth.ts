@@ -18,7 +18,7 @@ const config: NextAuthConfig = {
         const user = await res.json();
 
         if (res.ok && user) {
-          console.log(user);
+          // console.log(user);
           return user;
         }
 
@@ -26,14 +26,28 @@ const config: NextAuthConfig = {
       },
     }),
   ],
+  session: {
+    strategy: "jwt",
+    maxAge: 10 * 60,
+  },
   callbacks: {
-    session: async ({ session, token, user }) => {
-      return {
-        ...session,
-        user: {
-          ...session.user,
-        },
-      };
+    jwt: async ({ token, user }) => {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+      }
+
+      // console.log("token");
+      // console.log(token);
+      return token;
+    },
+    session: async ({ session, token }) => {
+      session.user.id = token.id as string;
+      session.user.email = token.email as string;
+
+      // console.log("session");
+      // console.log(session);
+      return session;
     },
   },
 };

@@ -1,6 +1,7 @@
 import ProfileChart from "@/components/profile/profilecharts";
 import ProfileLuck from "@/components/profile/profileluck";
 import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 
@@ -17,8 +18,18 @@ export interface StudentProfile {
 
 const MyProfile: React.FC = async () => {
   const session = await auth();
+  const headersList = await headers();
+  const cookie = headersList.get("cookie");
 
-  console.log(session);
+  const student = await fetch(process.env.AUTH_URL + "/api/student/", {
+    method: "GET",
+    credentials: "include",
+    headers: {
+      Cookie: cookie as string,
+    },
+  });
+
+  const studentData = (await student.json()) ?? {};
 
   return (
     <div>
@@ -34,8 +45,10 @@ const MyProfile: React.FC = async () => {
             alt="Profile picture"
           />
         </div>
-        <div className="mt-4">Krittin J.</div>
-        <div>6738087921</div>
+        <div className="mt-4">
+          {studentData.firstname + " " + studentData.lastname}
+        </div>
+        <div>{studentData.studentId}</div>
         <div className="mt-4">Civil Engineering</div>
       </div>
 

@@ -8,6 +8,7 @@ export interface IStudent extends Document {
   department: string;
   email: string;
   password: string;
+  isAdmin: boolean;
 }
 
 const StudentSchema: Schema = new Schema(
@@ -19,6 +20,7 @@ const StudentSchema: Schema = new Schema(
     department: { type: String, required: false },
     email: { type: String, required: true },
     password: { type: String, required: true },
+    isAdmin: { type: Boolean, required: false },
   },
   {
     timestamps: true,
