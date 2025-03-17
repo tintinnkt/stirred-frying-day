@@ -24,20 +24,20 @@ const Page = () => {
   if (!subject) return <p>Not Found</p>;
 
   return (
-    <main className="w-4/5">
+    <main className="">
       <section className="flex items-center justify-center text-center">
         <div className="flex-col px-2">
           <h2>{subject.subject_name}</h2>
           <p>Right now you have complete</p>
         </div>
         <span className="flex items-center">
-          <NumberTicker value={70} />%
+          <NumberTicker className="" value={70} />%
         </span>
       </section>
       <ul className="space-y-3">
         {subject.topics.map((topic, idx) => (
           <li key={idx}>
-            <Card className="bg-componentBackground px-4">
+            <Card className="bg-card px-4">
               <CardHeader className="flex flex-col">
                 <section className="flex items-center text-lg">
                   <CardTitle className="py-2 pr-2">{topic.title}</CardTitle>
@@ -46,15 +46,12 @@ const Page = () => {
                     needed
                   </Badge>
                 </section>
-                <CardDescription className="flex w-full items-center justify-between text-xs font-light">
-                  <div className="flex text-blue-500">
-                    <LibraryBig size={15} />
-                    50% of exam
+                <CardDescription className="flex w-full items-center justify-between space-x-3 text-xs font-light">
+                  <div className="text-secondary flex w-2/5 items-center space-x-1 text-sm font-medium">
+                    <LibraryBig size={25} />
+                    <p>50% of exam</p>
                   </div>
-                  <Progress
-                    value={80}
-                    className="w-2/3 bg-gray-400 text-orange-300"
-                  />
+                  <Progress value={80} className="w-3/5 text-black" />
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -65,7 +62,7 @@ const Page = () => {
                 </ul>
               </CardContent>
               <CardFooter className="flex justify-between">
-                <p className="space-x-1 text-sm">
+                <p className="space-x-1 pr-5 text-sm text-wrap">
                   <span>{topic.schedule.day}</span>
                   <span>{topic.schedule.time}</span>
                   <span> {topic.schedule.location}</span>

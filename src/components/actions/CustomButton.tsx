@@ -44,6 +44,7 @@ const buttonConfig: Record<string, ButtonConfig> = {
     label: "See Resources",
     variant: "secondary",
     icon: ChevronRight,
+    placeAt: "end",
   },
 };
 
@@ -81,6 +82,9 @@ export const CustomButton = ({
         <span className="hidden md:block">
           {typeof config?.label === "string" ? config?.label : config?.label.md}
         </span>
+      )}
+      {config?.placeAt === "end" && Icon && (
+        <Icon className="size-5" {...config?.iconProps} />
       )}
     </Button>
   );
