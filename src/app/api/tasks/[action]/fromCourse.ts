@@ -8,7 +8,7 @@ export const createTasksFromCourseSyllabus = async (
   owner: IStudent,
   course: ICourse,
 ) => {
-  let tasks: (typeof Task)[] = [];
+  const tasks: Array<typeof Task> = [];
 
   course.syllabus.forEach(({ topic, description }) => {
     const task = new Task({

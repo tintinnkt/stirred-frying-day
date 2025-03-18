@@ -88,7 +88,7 @@ export async function POST(
           { status: 400 },
         );
 
-      let courseIdNum = Number(courseId);
+      const courseIdNum = Number(courseId);
 
       if (isNaN(courseIdNum))
         return NextResponse.json(
