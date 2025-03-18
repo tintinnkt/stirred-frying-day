@@ -5,6 +5,7 @@ export interface ICourse extends Document {
   courseName: string;
   prerequisite: Array<number>;
   corequisite: Array<number>;
+  syllabus: Array<{ topic: string; description: string }>;
   location: string;
   instructor: string;
   description: string;
@@ -18,6 +19,12 @@ const CourseSchema: Schema = new Schema({
   location: { type: String, required: false },
   instructor: { type: String, required: false },
   description: { type: String, required: false },
+  syllabus: [
+    {
+      topic: { type: String, required: true },
+      description: { type: String, required: false },
+    },
+  ],
 });
 
 export default mongoose.models?.Course ||
