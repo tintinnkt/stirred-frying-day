@@ -4,12 +4,12 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 
-export type StudentData = {
+export interface StudentData {
   firstname: string;
   lastname: string;
   studentId: string;
   avatarUrl: string;
-};
+}
 
 export interface StudentProfile {
   profile: StudentData;

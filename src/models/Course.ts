@@ -3,8 +3,8 @@ import mongoose, { Document, Schema } from "mongoose";
 export interface ICourse extends Document {
   courseId: number;
   courseName: string;
-  prerequisite: number[];
-  corequisite: number[];
+  prerequisite: Array<number>;
+  corequisite: Array<number>;
   location: string;
   instructor: string;
   description: string;

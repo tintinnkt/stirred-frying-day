@@ -5,10 +5,10 @@ export interface TopicProps {
   title: string;
   examWeight: number;
   hoursNeeded: number;
-  topicsCovered: {
+  topicsCovered: Array<{
     name: string;
     complete: boolean;
-  }[];
+  }>;
   schedule: {
     day: string;
     time: string;
@@ -18,9 +18,9 @@ export interface TopicProps {
 
 const getSubjectProgress = ({ topics }: { topics: Array<TopicProps> }) => {
   let count = 0;
-  Array.isArray(topics) &&
+  if (Array.isArray(topics))
     topics.forEach(({ topicsCovered, examWeight }) => {
-      let topicProgress = getTopicProgress(topicsCovered);
+      const topicProgress = getTopicProgress(topicsCovered);
       count += (topicProgress / 100) * examWeight;
     });
 

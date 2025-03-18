@@ -1,5 +1,5 @@
-import SignIn from "@/components/signin";
-import SignUp from "@/components/signup";
+import SignIn from "@/components/Signin";
+import SignUp from "@/components/Signup";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 

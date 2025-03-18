@@ -17,10 +17,10 @@ export interface TopicProps {
   title: string;
   examWeight: number;
   hoursNeeded: number;
-  topicsCovered: {
+  topicsCovered: Array<{
     name: string;
     complete: boolean;
-  }[];
+  }>;
   schedule: {
     day: string;
     time: string;

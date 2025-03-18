@@ -47,16 +47,16 @@
 
 :root {
   --radius: 0.625rem;
-  --default: #1E1E1E;
-  --background: #FFFFF2;
+  --default: #1e1e1e;
+  --background: #fffff2;
   --foreground: oklch(0.145 0 0);
-  --card: #FFF7E2;
+  --card: #fff7e2;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #FBAD18;
-  --primary-foreground: #1E1E1E;
-  --secondary: #247BBA;
+  --primary: #fbad18;
+  --primary-foreground: #1e1e1e;
+  --secondary: #247bba;
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);

@@ -1,6 +1,6 @@
-import CourseProgress from "@/components/courseprogress";
-import DailyProgress from "@/components/dailyprogress";
-import Suggestion from "@/components/suggestion";
+import CourseProgress from "@/components/CourseProgress";
+import DailyProgress from "@/components/DailyProgress";
+import Suggestion from "@/components/Suggestion";
 
 import {
   dummyCourseProgressData,

@@ -1,4 +1,4 @@
-import { CourseProgressData } from "@/components/courseprogress";
+import { CourseProgressData } from "@/components/CourseProgress";
 
 export const dummyCourseProgressData = [
   { subject: "Calculus II", progress: 0.8 },
