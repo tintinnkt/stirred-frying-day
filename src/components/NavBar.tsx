@@ -20,7 +20,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <div className="flex w-full flex-wrap items-center justify-between bg-amber-300 p-4">
-      <Image src={"/logo.png"} alt="" width={40} height={40}></Image>
+      <Image src={"/logo.png"} alt="" width={40} height={40} />
       <DropdownMenu>
         <DropdownMenuTrigger className="rounded-md p-1 transition-all hover:scale-105 hover:bg-gray-100/40">
           <MenuIcon />

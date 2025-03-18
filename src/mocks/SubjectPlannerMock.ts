@@ -1,6 +1,6 @@
 export const mockData = [
   {
-    subject_id: "001",
+    planner_id: "001",
     subject_name: "Calculus II",
     topics: [
       {

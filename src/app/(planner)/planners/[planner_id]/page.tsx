@@ -7,9 +7,9 @@ import TopicCard from "../_components/TopicCard";
 import getSubjectProgress from "../_utils/getSubjectProgress";
 
 const Page = () => {
-  const { subject_id } = useParams();
+  const { planner_id } = useParams();
 
-  const subject = mockData.find((s) => s.subject_id === subject_id);
+  const subject = mockData.find((s) => s.planner_id === planner_id);
 
   if (!subject) return <p>Not Found</p>;
 

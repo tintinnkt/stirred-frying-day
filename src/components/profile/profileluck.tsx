@@ -21,8 +21,8 @@ const Prayer: React.FC = () => {
           <CarouselContent>
             {prayersMockData.map((value, idx) => (
               <CarouselItem key={idx}>
-                <div className="">
-                  <Card className="bg-gray-300">
+                <div className="flex h-full w-full items-center justify-center">
+                  <Card className="bg-background h-full w-full border-0">
                     <CardContent className="flex flex-col items-center justify-center">
                       {value.map((txt, iidx) => (
                         <div key={`${idx}_${iidx}`} className="m-1">
