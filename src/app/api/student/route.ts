@@ -19,7 +19,7 @@ export const GET = auth(async (req) => {
   const student = await Student.findOne({ email: auth?.user?.email }).exec();
 
   if (!student)
-    return NextResponse.json({ error: "You don't exists?" }, { status: 500 });
+    return NextResponse.json({ error: "Invalid session" }, { status: 400 });
 
   return NextResponse.json(student, { status: 200 });
 });
