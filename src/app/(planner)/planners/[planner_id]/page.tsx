@@ -46,7 +46,8 @@ const Page = () => {
     }
   >({
     mutationFn: async ({ plannerId, topicId, topicCoveredId, isComplete }) => {
-      axios.post("/api/update-topic-status", { //add backendRoutes
+      axios.post("/api/update-topic-status", {
+        //TODO: add backendRoutes
         plannerId,
         topicId,
         topicCoveredId,
