@@ -7,6 +7,10 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "lint": "next lint",
+    "lint:fix": "eslint --fix .",
+    "lint:strict": "tsc --noEmit",
+    "prettier:check": "prettier --check .",
+    "prettier:clean": "prettier --write .",
     "start": "next start"
   },
   "dependencies": {
