@@ -27,5 +27,5 @@ const StudentSchema: Schema = new Schema(
   },
 );
 
-export default mongoose.models.Student ||
+export default mongoose.models?.Student ||
   mongoose.model<IStudent>("Student", StudentSchema);

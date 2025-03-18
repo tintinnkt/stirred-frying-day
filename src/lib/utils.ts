@@ -1,3 +1,4 @@
+import Student, { IStudent } from "@/models/Student";
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -15,3 +16,16 @@ export async function handlePromise<T>(
     return [null, error];
   }
 }
+
+export const isAdmin = async (query: {
+  email?: string;
+  studentId?: string;
+}) => {
+  const student = (await Student.findOne(query).exec()) as IStudent;
+
+  if (!student) return false;
+
+  //NOTE: isAdmin can be null
+  if (student.isAdmin) return true;
+  return false;
+};

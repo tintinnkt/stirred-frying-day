@@ -10,7 +10,7 @@ import {
 //TODO: Move this page somewhere else?
 export default function Home() {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex w-full flex-col">
       {/*
 		  <div className="m-4 flex gap-4">
 		  <Image

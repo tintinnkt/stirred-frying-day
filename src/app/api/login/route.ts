@@ -16,9 +16,6 @@ export async function POST(request: Request) {
       { status: 500 },
     );
 
-  console.log("BODY HERE: ");
-  console.log(body);
-
   const { studentId, password } = body;
 
   if (!studentId || !password) {

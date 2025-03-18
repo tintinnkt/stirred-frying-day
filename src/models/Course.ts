@@ -20,5 +20,5 @@ const CourseSchema: Schema = new Schema({
   description: { type: String, required: false },
 });
 
-export default mongoose.models.Course ||
+export default mongoose.models?.Course ||
   mongoose.model<ICourse>("Course", CourseSchema);
