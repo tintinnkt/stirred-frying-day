@@ -1,4 +1,6 @@
 import Navbar from "@/components/NavBar";
+import { NextAuthProvider } from "@/providers";
+import { TanstackQueryProvider } from "@/providers/TanstackQueryProvider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "react-hot-toast";
@@ -29,9 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-background flex w-full flex-col items-center justify-self-center antialiased md:w-3/4`}
       >
-        <Navbar />
-        <Toaster position="bottom-right" />
-        {children}
+        <TanstackQueryProvider>
+          <NextAuthProvider>
+            <Navbar />
+            <Toaster position="bottom-right" />
+            {children}
+          </NextAuthProvider>
+        </TanstackQueryProvider>
       </body>
     </html>
   );
